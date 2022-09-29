@@ -1,0 +1,299 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f1f5f8;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: width .3s ease-in-out;
+}
+
+li:hover a::after {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.menu-section {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  height: 100%;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  top: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-100%);
+  transition: 0.3s;
+}
+
+.show-sidebar {
+  transform: translate(0);
+}
+
+.sidebar a {
+  width: 100%;
+  margin-top: .5em;
+  display: block;
+}
+
+.title {
+  margin: 20px 0 15px 0;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title h2 {
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.title h2::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: rgb(197, 157, 95);
+  position: absolute;
+  top: 35px;
+  left: 25%;
+}
+
+.title button {
+  background: transparent;
+  border: none;
+}
+
+.title .fas {
+  font-size: 2rem;
+  display: none;
+}
+
+.filter-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.filter-btns a,
+.sidebar a{
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  color: #000;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.filter-btns button:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.filter-btns button:active {
+  background: rgba(149, 157, 165, 0.2);
+}
+
+.item-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-bottom: 30px;
+}
+
+.menu-item {
+  margin-top: 40px;
+  display: flex;
+  padding: 20px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.details {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.price {
+  color: rgb(197, 157, 95);
+  font-weight: 700;
+}
+
+.name-price::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  background: rgb(197, 157, 95);
+  top: 28px;
+  opacity: 0.7;
+}
+
+.description {
+  line-height: 20px;
+  font-weight: 300;
+  margin-top: 30px;
+  font-size: 0.95rem;
+}
+
+
+/* --------Images--------- */
+.img {
+  width: 200px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.image {
+  background-image: url("images/item-1.jpeg");
+}
+
+.image-2 {
+  background-image: url("images/item-2.jpeg");
+}
+
+.image-3 {
+  background-image: url("images/item-3.jpeg");
+}
+
+.image-4 {
+  background-image: url("images/item-4.jpeg");
+}
+
+.image-5 {
+  background-image: url("images/item-5.jpeg");
+}
+
+.image-6 {
+  background-image: url("images/item-6.jpeg");
+}
+
+.image-7 {
+  background-image: url("images/item-7.jpeg");
+}
+
+.image-8 {
+  background-image: url("images/item-8.jpeg");
+}
+
+.image-9 {
+  background-image: url("images/item-9.jpeg");
+}
+
+.image-10 {
+  background-image: url("images/item-10.jpeg");
+}
+
+.image:hover,
+.image-1:hover,
+.image-2:hover,
+.image-3:hover,
+.image-4:hover,
+.image-5:hover,
+.image-6:hover,
+.image-7:hover,
+.image-8:hover,
+.image-9:hover,
+.image-10:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- Media Query ------------ */
+@media screen and (max-width: 800px) {
+  .item-wrap {
+    flex-direction: column;
+  }
+
+  .menu-section {
+    width: 100%;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    min-width: 400px;
+  }
+
+  .details {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .img {
+    width: 100%;
+    padding: 100px;
+  }
+
+  .title .fas {
+    display: block;
+  }
+
+  .filter-btns {
+    display: none;
+  }
+
+  .title {
+    padding: 0 20px;
+    min-width: 400px;
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/9a1dc8009d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Treats Menu</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <a href="#all" class="filter" data-id="all">All</a>
+        <a href="#breakfast" class="filter" data-id="breakfast">Breakfast</a>
+        <a href="#lunch" class="filter" data-id="lunch">Lunch</a>
+        <a href="#shake" class="filter" data-id="shake">Shakes</a>
+        <a href="#dinner" class="filter" data-id="dinner">Dinner</a>
+      </div>
+      <section class="menu-section">
+        <div class="title">
+          <h2>Foody.Foody</h2>
+          <div class="filter-btns">
+            <a href="#all" class="filter" data-id="all">All</a>
+            <a href="#breakfast" class="filter" data-id="breakfast"
+              >Breakfast</a
+            >
+            <a href="#lunch" class="filter" data-id="lunch">Lunch</a>
+            <a href="#shake" class="filter" data-id="shake">Shakes</a>
+            <a href="#dinner" class="filter" data-id="dinner">Dinner</a>
+          </div>
+          <button class="menu"><i class="fas fa-hamburger"></i></button>
+        </div>
+
+        <div class="item-wrap">
+          <!-- Single Item -->
+          <div class="menu-item">
+            <div class="image img"></div>
+            <div class="details">
+              <div class="name-price">
+                <h3>Buttermilk Pancakes</h3>
+                <p class="price">$15.99</p>
+              </div>
+              <p class="description">
+                I'm baby woke milkshake wolf bitters live-edge blue bottle,
+                hammock freegan copper mug whatever cold-pressed
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="menu.js"></script>
+  </body>
+</html>
